@@ -1,0 +1,653 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+/* studying style */
+#studying {
+  background-color: #CBE4DE;
+  padding: 50px 0;
+  text-align: center;
+}
+
+#studying .card {
+  border: none;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+#studying .card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+#studying .card-img-top {
+  object-fit: cover;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 80%;
+  margin-top: 10%;
+}
+
+#studying .card-body {
+  padding-bottom: 10%;
+}
+#studying .card h5 {
+  font-size: 24px;
+}
+
+#studying .card p {
+  font-size: 16px;
+}
+#studying .card a {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  #studying .card {
+    max-width: 300px;
+  }
+  
+  #studying .card-img-top {
+    object-fit: cover;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 80%;
+    margin-top: 10%;
+  }
+  #studying .card h5 {
+    font-size: 18px;
+  }
+  
+  #studying .card p {
+    font-size: 14px;
+  }
+  #studying .card a {
+    font-size: 14px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* CSS untuk section Home */
+#home {
+  background-color: #CBE4DE;
+  padding: 50px 0;
+  text-align: center;
+}
+.profile {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 5px solid #CBE4DE;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+.profile img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 50px;
+}
+p {
+  font-size: 18px;
+  font-weight: 1000;
+}
+#photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+}
+/* btn */
+.more-items {
+  text-align: center;
+  margin-top: 30px;
+}
+.more-btn, .less-btn {
+  background-color: #2E4F4F;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 30px;
+  margin-right: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+.more-btn:hover {
+  background-color: #0E8388;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+.less-btn {
+  background-color: #fff;
+  color: #2E4F4F;
+  border: 1px solid #2C3333;
+  border-radius: 20px;
+  padding: 10px 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.less-btn:hover {
+  background-color: #2E4F4F;
+  color: #fff;
+}
+@media only screen and (max-width: 600px) {
+  .more-btn, .less-btn {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .more-btn, .less-btn {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .more-btn, .less-btn {
+    font-size: 18px;
+  }
+}
+
+
+.photo:hover img {
+  transform: scale(1.1);
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* CSS untuk section About */
+#about {
+  background-color: #CBE4DE;
+  padding: 50px 0;
+  text-align: center;
+}
+h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+h5{
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #2C3333;
+  background-color: #CBE4DE;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+  margin:10px;
+}
+body.loaded {
+  overflow: auto;
+}
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+.profile img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+
+.profile {
+  text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+
+
+nav {
+  background-color: #2E4F4F;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  opacity: 1;
+  transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  animation: slide-down 0.5s ease-in-out;
+    
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+nav.scroll {
+  top: -100px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  transition: top 1s ease-in-out;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+  position: relative;  
+}
+
+nav a {
+  display: block;
+  padding: 20px;
+  color: #CBE4DE;
+  text-decoration: none;
+  position: relative;
+  transition: color 1s ease-in-out;
+}
+
+nav .slider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #2E4F4F;
+  transition: all 0.2s ease;
+}
+nav ul li:hover {
+  background-color: #0E8388;
+  transition: background-color 0.3s ease 0.5s;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(-100%);
+}
+
+.navbar-visible {
+  opacity: 1 !important;
+  transform: translateY(0%);
+}
+
+.navbar:not(.navbar-visible).navbar-scroll-out {
+  transition: none;
+  opacity: 1 !important;
+}
+.navbar-hidden {
+  transform: translateY(-100%); /* Mengubah posisi navbar ke atas sejauh 100% saat disembunyikan */
+}
+.navbar-nav li:hover > a {
+  background-color: #0E8388;
+  color: #CBE4DE;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #0E8388;
+  transition: background-color 0.3s ease;
+}
+
+nav li.active > a {
+  color: #fff;
+  background-color: #0E8388;
+  border-radius: 5px; /* membuat sudut bulat */
+  box-shadow: 0px 0px 5px #0E8388; /* menambahkan shadow */
+  transform: scale(1.1); /* memberikan efek scaling */
+  transition: all 0.2s ease-in-out; /* memberikan efek transisi */
+  
+}
+
+nav li:hover .slider,nav li.active .slider {
+  width: 100%;
+}
+.navbar.hidden {
+  top: -100%;
+  opacity: 0;
+  transition-delay: 0.5s
+  
+}
+
+
+.navbar-scroll-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  animation: fade-out 0.3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.navbar.nav-scroll {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navbar.nav-scroll-out {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@media screen and (max-width: 768px) {
+  nav a {
+    font-size: 14px;
+  }
+}
+
+
+
+section {
+  text-align: center;
+}
+
+
+#header {
+  background-color: #2C3333; /* ganti dengan #000000 */
+  color: #CBE4DE;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+#header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+
+
+/* zz */
+#certificate {
+  background-color: #CBE4DE;
+  padding: 50px 0;
+  text-align: center;
+}
+#certificate .card {
+  border: none;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+#certificate .card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+#certificate .card-img-top {
+  object-fit: cover;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 80%;
+  margin-top: 10%;
+
+}
+
+#certificate .card-body {
+  padding-bottom: 10%;
+}
+#certificate .card h5 {
+  font-size: 24px;
+}
+
+#certificate .card p {
+  font-size: 16px;
+}
+#certificate .card a {
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  #certificate .card {
+    max-width: 300px;
+  }
+  
+  #certificate .card-img-top {
+    object-fit: cover;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 80%;
+    margin-top: 10%;
+  }
+  #certificate .card h5 {
+    font-size: 18px;
+  }
+  
+  #certificate .card p {
+    font-size: 14px;
+  }
+  #certificate .card a {
+    font-size: 14px;
+  }
+}
+a{
+  text-decoration: none;
+  color: #2C3333
+}
+
+footer {
+  text-align: center;
+  background-color: #2E4F4F;
+  color: #CBE4DE;
+  padding: 20px 0;
+}
+
+footer a[href^="mailto:"] {
+  color: #CBE4DE;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+footer .follow-me {
+  padding-top: 20px;
+}
+footer a[href^="https://"]:hover, footer a[href^="http://"]:hover {
+  transform: scale(1.2); /* ubah ukuran gambar saat dihover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* tambahkan efek shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* tambahkan transisi untuk membuat animasi lebih smooth */
+}
+
+
+footer a[href^="mailto:"] img {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+}
+footer a[href^="http"] img {
+  width: 40px;
+  height: 40px;
+}
+footer a[href^="http"] img:hover {
+  transform: scale(1.2);
+}
+
+footer h5 {
+  font-size: 20px;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer li {
+  margin: 5px;
+}
+
+footer img {
+  width: 40px;
+  height: 40px;
+}
+
+address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+address a {
+  display: flex;
+  align-items: center;
+}
+
+address a img {
+  height: 2em;
+  width: 2em;
+  display: inline-block; /* membuat logo email sejajar dengan teks */
+  vertical-align: middle;
+}
+
+/* Styles untuk mode mobile */
+@media only screen and (max-width: 768px) {
+  footer a[href^="http"] img {
+    width: 30px;
+    height: 30px;
+  }
+
+  footer h5 {
+    font-size: 16px;
+  }
+  footer a[href^="mailto:"] img {
+    height: 15px;
+    width: 15px;
+    margin-right: 2.5px;
+  }
+  address a img {
+    height: 1.5em;
+    width: 1.5em;
+    display: inline-block; /* membuat logo email sejajar dengan teks */
+    vertical-align: middle;
+  }
+}
+.logo-list {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-list li {
+  margin-right: 10px; /* tambahkan margin kanan agar logo tidak menempel */
+}
+.logo-list img {
+  max-width: 50px;
+}
+ul.list-unstyled {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+ul.list-unstyled li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+}
+/* menghilangkan scrollbar di elemen dengan class content */
+.content {
+  overflow: auto;
+  /* overflow-x: hidden; -- jika hanya ingin menghilangkan scrollbar horizontal */
+}
+
+/* gaya scrollbar untuk browser Chrome */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #CBE4DE;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2E4F4F;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0E8388;
+}
+
+
