@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
   // menyembunyikan card Studying secara default
   $('.studying.hidden').hide();
   $('.certificate.hidden').hide();
@@ -41,10 +41,15 @@ $(document).ready(function() {
     }
   });
 
+  // menambahkan kelas "loaded" pada body setelah halaman selesai dimuat
+  $('body').addClass('loaded');
+
   const navbar = $('.navbar-expand-lg');
   const navLinks = $('.navbar-nav a');
   const sections = $('section');
   let prevScrollpos = $(window).scrollTop();
+  let isScrollingDown = false;
+  let timer;
 
   $(window).on('scroll', function() {
     const currentScrollPos = $(this).scrollTop();
@@ -53,11 +58,13 @@ $(document).ready(function() {
       navbar.removeClass('hidden');
       navbar.addClass('animated');
       navbar.removeClass('navbar-hidden'); // menampilkan navbar saat scroll ke atas
+      isScrollingDown = false;
     } else {
       navbar.addClass('navbar-scroll-out');
       navbar.addClass('hidden');
       navbar.removeClass('animated');
       navbar.addClass('navbar-hidden'); // menyembunyikan navbar saat scroll ke bawah
+      isScrollingDown = true;
     }
     prevScrollpos = currentScrollPos;
 
@@ -71,18 +78,45 @@ $(document).ready(function() {
         $(`.navbar-nav a[href='#${href}']`).addClass('active');
       }
     });
-  });
 
-  const mobileNavToggle = $('.navbar-toggler');
-  const mobileNavLinks = $('.navbar-nav a');
+    // tambahkan kode berikut
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+      navbar.removeClass('navbar-scroll-out');
+navbar.removeClass('hidden');
+navbar.removeClass('animated');
+navbar.removeClass('navbar-hidden');
+navbar.addClass('nav-scroll');
+}, 1000);
 
-  mobileNavToggle.on('click', function() {
-    navbar.toggleClass('mobile-nav');
-  });
+const navHeight = navbar.outerHeight();
+const documentHeight = $(document).height();
+const windowHeight = $(window).height();
+const scrollDistance = documentHeight - (navHeight + windowHeight);
+if ($(window).scrollTop() >= scrollDistance) {
+  navbar.removeClass('navbar-scroll-out');
+  navbar.removeClass('hidden');
+  navbar.removeClass('animated');
+  navbar.removeClass('navbar-hidden');
+  navbar.addClass('nav-scroll');
+} else if ($(window).scrollTop() > 50 || isScrollingDown) {
+  navbar.addClass('nav-scroll');
+} else {
+  navbar.removeClass('nav-scroll');
+}
+});
 
-  mobileNavLinks.on('click', function() {
-    if (navbar.hasClass('mobile-nav')) {
-      navbar.removeClass('mobile-nav');
-    }
-  });
+// tambahkan kode berikut
+const mobileNavToggle = $('.navbar-toggler');
+const mobileNavLinks = $('.navbar-nav a');
+
+mobileNavToggle.on('click', function() {
+  navbar.toggleClass('mobile-nav');
+});
+
+mobileNavLinks.on('click', function() {
+  if (navbar.hasClass('mobile-nav')) {
+    navbar.removeClass('mobile-nav');
+  }
+});
 });
