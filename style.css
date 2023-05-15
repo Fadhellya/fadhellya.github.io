@@ -43,6 +43,16 @@
 #studying .card a {
   font-size: 16px;
 }
+@media (max-width: 768px) {
+  #studying .card p,
+  #home p,
+  #about p,
+  #certificate .card p {
+    font-size: 14px;
+  }
+  
+}
+
 
 @media (max-width: 768px) {
   #studying .card {
