@@ -52,7 +52,15 @@
   }
   
 }
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 35px !important; /* Ukuran teks pada mode ponsel */
+  }
 
+  h2 {
+    font-size: 20px !important; /* Ukuran teks pada mode ponsel */
+  }
+}
 
 @media (max-width: 768px) {
   #studying .card {
