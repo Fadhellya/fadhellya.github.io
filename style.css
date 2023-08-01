@@ -447,73 +447,7 @@ section {
 
 
 /* zz */
-#certificate {
-  background-color: #CBE4DE;
-  padding: 50px 0;
-  text-align: center;
-}
-#certificate .card {
-  border: none;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
 
-#certificate .card:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  transform: translateY(-5px);
-}
-
-#certificate .card-img-top {
-  object-fit: cover;
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  height: 80%;
-  margin-top: 10%;
-
-}
-
-#certificate .card-body {
-  padding-bottom: 10%;
-}
-#certificate .card h5 {
-  font-size: 24px;
-}
-
-#certificate .card p {
-  font-size: 16px;
-}
-#certificate .card a {
-  font-size: 16px;
-}
-@media (max-width: 768px) {
-  #certificate .card {
-    max-width: 300px;
-  }
-  
-  #certificate .card-img-top {
-    object-fit: cover;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    height: 80%;
-    margin-top: 10%;
-  }
-  #certificate .card h5 {
-    font-size: 18px;
-  }
-  
-  #certificate .card p {
-    font-size: 14px;
-  }
-  #certificate .card a {
-    font-size: 14px;
-  }
-}
 a{
   text-decoration: none;
   color: #2C3333
