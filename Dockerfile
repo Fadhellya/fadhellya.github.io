@@ -5,4 +5,4 @@ COPY . /usr/local/apache2/htdocs/
 USER root 
 RUN chgrp -R 0 /usr/local/apache2 && chmod -R g=u /usr/local/apache2 
 USER 1001
-EXPOSE 1020
+EXPOSE 1025
